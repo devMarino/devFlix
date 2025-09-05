@@ -3,10 +3,10 @@
     padding: 0;
 }
 
-.body {
+body {
     display: grid;
-    grid-template-areas: border-box;
     grid-template-columns: 200px 1fr;
+    box-sizing: border-box;
     grid-template-areas: 
     "header header"
     "sidebar main"
@@ -29,7 +29,7 @@
 .cabecalho .menu {
     display: flex;
     gap: 1em;
-    flex-direction: row;
+    flex-direction: row;    
 }
 
 .cabecalho .menu a{
@@ -40,7 +40,7 @@
 }
 /*aqui é um comentário do marcelinho*/
 .cabecalho .menu a:hover{
-    color: aquamarine;
+    color: #2E2E2E;
     border: 1px solid #fff;
 }
 /* barra lateral*/
@@ -59,28 +59,49 @@
 
 .sidebar ul li {
     text-decoration: none;
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     background-color: goldenrod;
     color: #fff;
 }
 .conteudo {
+    background-color: #FAF9F6;
     grid-area: main;
 }
 
 .template-filmes {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; /* centraliza os cartões*/
+    gap: 1.5em; /* espaço entre os cartões*/
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
 }
 
 .template-filmes .filmes{
-    max-width: 30%;
+    max-width: 20%;
 }
 .template-filmes .filmes img {
     max-width: 100%;
+    height: auto; /* deixa as imagens na mesma altura*/
+    object-fit: cover; /*corta a imagem para caber no espaço*/
+
 }
+
 .footer{
     grid-area: footer;
+}
+
+/* responsividade mobile */
+
+@media (max-width: 778px) {
+body{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+    gap: 1rem;
+}
 }
