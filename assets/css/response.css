@@ -1,0 +1,57 @@
+@media (max-width : 720px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    }
+    .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: none;
+    align-items: center;
+}
+
+.cabecalho .logo {
+    text-align: center;
+}
+
+.sidebar {
+    flex-direction: column;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    align-items: center;
+}
+
+.sidebar ul{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.template-filmes .filmes{
+    border: 1px solid orangered;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.filmes p{
+    /* colocar limite no texto*/
+}
+.titulo{
+    /*  ajeitar titulo no response e style*/
+    text-align: center;
+    margin: 1em;
+    
+}
+
+
+}

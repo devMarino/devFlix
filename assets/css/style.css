@@ -21,7 +21,9 @@ body {
     align-items: center;
     justify-content: space-around;
     padding: 1rem;
+    border-bottom: 1px solid #000;
 }
+
 .cabecalho .logo img{
     max-width: 20%;
 }
@@ -42,6 +44,7 @@ body {
 .cabecalho .menu a:hover{
     color: #2E2E2E;
     border: 1px solid #fff;
+    
 }
 /* barra lateral*/
 .sidebar{
@@ -50,7 +53,8 @@ body {
     flex-direction: column;
     gap: 1em;
     padding: 1rem;
-    
+    background-color: goldenrod;
+    border-right: 1px solid #000;
 }
 
 .sidebar ul {
@@ -88,20 +92,7 @@ body {
 
 }
 
+
 .footer{
     grid-area: footer;
-}
-
-/* responsividade mobile */
-
-@media (max-width: 778px) {
-body{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header"
-    "sidebar"
-    "main"
-    "footer";
-    gap: 1rem;
-}
 }
